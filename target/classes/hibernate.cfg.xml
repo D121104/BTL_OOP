@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Thông tin kết nối cơ sở dữ liệu -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/my_learner</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Trangthao281004</property>
+
+        <!-- Hibernate Dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+        
+        <!-- Hiển thị câu lệnh SQL trong console -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Tự động cập nhật bảng theo entity model -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Khai báo lớp entity User -->
+        <mapping class="com.mycompany.librarymanagementapp.model.User"/>
+        <mapping class="com.mycompany.librarymanagementapp.model.Person"/>
+        <mapping class="com.mycompany.librarymanagementapp.model.Student"/>
+        <mapping class="com.mycompany.librarymanagementapp.model.Teacher"/>
+        <mapping class="com.mycompany.librarymanagementapp.model.Book"/>
+        <mapping class="com.mycompany.librarymanagementapp.model.Category"/>
+        <mapping class="com.mycompany.librarymanagementapp.model.Publisher"/>
+        <mapping class="com.mycompany.librarymanagementapp.model.Borrower"/>
+        <mapping class="com.mycompany.librarymanagementapp.model.BorrowerRule"/>
+        <mapping class="com.mycompany.librarymanagementapp.model.BorrowRecord"/>
+        
+    </session-factory>
+</hibernate-configuration>
