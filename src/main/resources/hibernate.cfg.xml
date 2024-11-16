@@ -13,9 +13,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
 
         <!-- Thông tin kết nối cơ sở dữ liệu -->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/my_learner</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ten db</property>
         <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">Trangthao281004</property>
+        <property name="hibernate.connection.password">pass db</property>
 
         <!-- Hibernate Dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
