@@ -7,6 +7,8 @@ package com.mycompany.librarymanagementapp;
 
 import com.mycompany.librarymanagementapp.model.*;
 import com.mycompany.librarymanagementapp.dao.*;
+import com.mycompany.librarymanagementapp.view.Giaodienchinh;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -15,6 +17,15 @@ import com.mycompany.librarymanagementapp.dao.*;
 public class LibraryManagementApp {
 
     public static void main(String[] args) {
+        new LibraryManagementApp().run();
+    }
+
+    public void run() {
+        // Khởi chạy giao diện chính
+        SwingUtilities.invokeLater(() -> {
+            Giaodienchinh giaodienchinh = new Giaodienchinh();
+            giaodienchinh.setVisible(true);
+        });
         System.out.println("Hello World!");
         
         PublisherDAO publisherDAO = new PublisherDAO();
