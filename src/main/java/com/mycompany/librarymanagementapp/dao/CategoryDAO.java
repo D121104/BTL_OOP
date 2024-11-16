@@ -47,7 +47,7 @@ public class CategoryDAO {
     }
 
     // xoa category
-    public void deleteCategoryById(Long categoryId) {
+    public void deleteCategoryById(int categoryId) {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
@@ -65,7 +65,7 @@ public class CategoryDAO {
     }
 
     // lay category theo id
-    public Category getCategoryById(Long id) {
+    public Category getCategoryById(int id) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             return session.get(Category.class, id);
         } catch (Exception e) {

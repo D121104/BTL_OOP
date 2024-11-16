@@ -48,7 +48,7 @@ public class BookDAO {
     }
 
     // xoa sach theo id
-    public void deleteBookbById(Long bookId) {
+    public void deleteBookbById(int bookId) {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
@@ -66,7 +66,7 @@ public class BookDAO {
     }
 
     // lay sach bang id
-    public Book getBookById(Long id) {
+    public Book getBookById(int id) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             return session.get(Book.class, id);
         } catch (Exception e) {

@@ -47,7 +47,7 @@ public class PublisherDAO {
     }
 
     // xoa publisher theo id
-    public void deletePublisherById(Long publisherId) {
+    public void deletePublisherById(int publisherId) {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
@@ -65,7 +65,7 @@ public class PublisherDAO {
     }
 
     // lay publisher theo id
-    public Publisher getPublisherById(Long id) {
+    public Publisher getPublisherById(int id) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             return session.get(Publisher.class, id);
         } catch (Exception e) {
